@@ -3,7 +3,12 @@ import { Server } from 'socket.io'
 class Socket {
     private _io: Server;
     constructor() {
-        this._io = new Server();
+        this._io = new Server({
+            cors:{
+                origin: '*',
+                allowedHeaders: ['*']
+            }
+        });
         console.log('Socket server initialized');
     }
 
