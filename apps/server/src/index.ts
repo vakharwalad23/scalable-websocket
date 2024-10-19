@@ -1,5 +1,7 @@
 import http from 'http'
 import Socket from './services/socket';
+import { config } from 'dotenv';
+config();
 
 async function startServer() {
     const socket = new Socket();
